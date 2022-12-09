@@ -1,9 +1,14 @@
-/* @refresh reload 
-Index.jsx is an entry point for the app, which targets the element with id root in index.html
-*/
+/* @refresh reload */
 import { render } from 'solid-js/web';
-
+import { Router } from '@solidjs/router';
 import './index.css';
 import App from './App';
 
-render(() => <App />, document.getElementById('root'));
+render(
+	() => (
+	<Router> 
+		<App /> 
+	</Router> 
+	),
+	 document.getElementById('root')
+);
